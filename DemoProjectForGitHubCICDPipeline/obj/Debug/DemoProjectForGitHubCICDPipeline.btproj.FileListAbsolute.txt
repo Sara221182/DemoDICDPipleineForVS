@@ -1,0 +1,4 @@
+C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoProjectForGitHubCICDPipeline\bin\Debug\DemoProjectForGitHubCICDPipeline.dll
+C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoProjectForGitHubCICDPipeline\bin\Debug\DemoProjectForGitHubCICDPipeline.pdb
+C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoProjectForGitHubCICDPipeline\obj\Debug\DemoProjectForGitHubCICDPipeline.dll
+C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoProjectForGitHubCICDPipeline\obj\Debug\DemoProjectForGitHubCICDPipeline.pdb
