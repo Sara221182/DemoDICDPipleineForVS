@@ -35,16 +35,14 @@ jobs:
       #run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle 
       run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=C:\ShashankWork\CICDDemo\Pakage /p:OutDir=C:\ShashankWork\CICDDemo
 
-
-   # move the files to UAT
-    - name: move files
+    
+    - name: copy file via ssh password
       uses: actions/checkout@v3
-
-    - name: Move file
-      run: |
-          move C:\ShashankWork\CICDDemo\* C:\ShashankWork\CITest
-
-
-      
-
+      with:
+        host: ${{ C1UBT02-USEA1A }}
+        username: ${{ corcentric\sbhosekar }}
+        password: ${{ Westgate#2020 }}
+        port: ${{ 22 }}
+        source: C:\ShashankWork\CITest\*
+        target: \\c1ubt02-USEA1A\BIZ_BACKUP\CITestPakage
     
