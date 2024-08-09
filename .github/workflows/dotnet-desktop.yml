@@ -42,7 +42,7 @@ jobs:
 
     - name: Move file
       run: |
-          move C:\ShashankWork\CICDDemo\* C:\ShashankWork\CICDDemo\Pakage\
+          move C:\ShashankWork\CICDDemo\* C:\ShashankWork\CITest
 
 
       
