@@ -18,6 +18,7 @@ jobs:
       Test_Project_Path: DemoDICDPipleineForVS\DemoProjectForGitHubCICDPipeline                     # Replace with the path to your test project, i.e. MyWpfApp.Tests\MyWpfApp.Tests.csproj.
       Wap_Project_Directory: DemoProjectForGitHubCICDPipeline.Package.                              # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
       Wap_Project_Path: DemoProjectForGitHubCICDPipeline/DemoProjectForGitHubCICDPipeline.btproj                      # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
+    
       
     steps:
     - name: Checkout
@@ -32,7 +33,7 @@ jobs:
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
       #run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle 
-      run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:OutDir=\\c1ubt02-USEA1A\BIZ_BACKUP\CITestPakage
+      run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=$env:Wap_Project_Directory /p:OutDir=C:\ShashankWork\CICDDemo
       env:
         Appx_Bundle: Always
         Appx_Bundle_Platforms: x86|x64
