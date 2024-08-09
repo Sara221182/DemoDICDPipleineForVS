@@ -36,7 +36,7 @@ jobs:
       run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=C:\ShashankWork\CICDDemo\Pakage /p:OutDir=C:\ShashankWork\CICDDemo
 
     
-    - name: copy file via ssh password
+    - name: copy files  
       uses: actions/checkout@v3
       with:
         host: ${{ C1UBT02-USEA1A }}
