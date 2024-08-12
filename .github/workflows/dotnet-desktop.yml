@@ -37,10 +37,10 @@ jobs:
 
     
    # move the files to UAT
-    - name: move files
-      uses: actions/checkout@v3
+   # - name: move files
+   #   uses: actions/checkout@v3
 
-    - name: Move file
-      run: |
-          move C:\ShashankWork\CICDDemo\* \\c1ubt02-USEA1A\BIZ_BACKUP\CITestPakage
+   #- name: Move file
+   #   run: |
+   #       move C:\ShashankWork\CICDDemo\* \\c1ubt02-USEA1A\BIZ_BACKUP\CITestPakage
     
