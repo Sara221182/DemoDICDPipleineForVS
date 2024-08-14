@@ -90,7 +90,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="demo.snk" />
+    <None Include="Functions\Build.ps1" />
+    <None Include="Functions\Deploy.ps1" />
+    <None Include="Functions\General.ps1" />
+    <None Include="Functions\Install.ps1" />
+    <None Include="Functions\Undeploy.ps1" />
+    <None Include="Functions\Uninstall.ps1" />
+    <None Include="Scripts\OrderSystemProject_Build.ps1" />
+    <None Include="Scripts\OrderSystemProject_FullDeploy.ps1" />
+    <None Include="Scripts\Settings_BuildEnvironment.csv" />
+    <None Include="Scripts\Settings_DeploymentEnvironment.csv" />
+    <None Include="Tests\Build.Tests.ps1" />
+    <None Include="Tests\Deploy.Tests.ps1" />
+    <None Include="Tests\General.Tests.ps1" />
+    <None Include="Tests\Install.Tests.ps1" />
+    <None Include="Tests\Undeploy.Tests.ps1" />
+    <None Include="Tests\Uninstall.Tests.ps1" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
 </Project>

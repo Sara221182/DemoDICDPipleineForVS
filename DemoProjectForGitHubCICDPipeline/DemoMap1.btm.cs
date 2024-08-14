@@ -14,7 +14,7 @@ namespace DemoProjectForGitHubCICDPipeline {
   <xsl:template match=""/s0:Root"">
     <ns0:Root>
       <xsl:for-each select=""Record"">
-        <xsl:variable name=""var:v1"" select=""userCSharp:MathMultiply(string(Test1/text()) , &quot;10&quot;)"" />
+        <xsl:variable name=""var:v1"" select=""userCSharp:StringTrimLeft(string(Test1/text()))"" />
         <Record>
           <OutTest2>
             <xsl:value-of select=""$var:v1"" />
@@ -24,55 +24,15 @@ namespace DemoProjectForGitHubCICDPipeline {
     </ns0:Root>
   </xsl:template>
   <msxsl:script language=""C#"" implements-prefix=""userCSharp""><![CDATA[
-public string MathMultiply(string param0, string param1)
+public string StringTrimLeft(string str)
 {
-	System.Collections.ArrayList listValues = new System.Collections.ArrayList();
-	listValues.Add(param0);
-	listValues.Add(param1);
-	double ret = 1;
-	bool first = true;
-	foreach (string obj in listValues)
+	if (str == null)
 	{
-		double d = 0;
-		if (IsNumeric(obj, ref d))
-		{
-			if (first)
-			{
-				first = false;
-				ret = d;
-			}
-			else
-			{
-				ret *= d;
-			}
-		}
-		else
-		{
-			return """";
-		}
+		return """";
 	}
-	return ret.ToString(System.Globalization.CultureInfo.InvariantCulture);
+	return str.TrimStart(null);
 }
 
-
-public bool IsNumeric(string val)
-{
-	if (val == null)
-	{
-		return false;
-	}
-	double d = 0;
-	return Double.TryParse(val, System.Globalization.NumberStyles.AllowThousands | System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out d);
-}
-
-public bool IsNumeric(string val, ref double d)
-{
-	if (val == null)
-	{
-		return false;
-	}
-	return Double.TryParse(val, System.Globalization.NumberStyles.AllowThousands | System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out d);
-}
 
 
 ]]></msxsl:script>
