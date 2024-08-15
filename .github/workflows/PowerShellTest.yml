@@ -3,10 +3,10 @@ on: [push]
 jobs:
     build:
       name: Run Script
-      runs-on: selfhost 
+      runs-on: self-hosted 
       steps: 
         - uses: actions/checkout@v1
         - name: Scirpt
-          run: ./script.ps1
+          run: ./DemoProjectForGitHubCICDPipeline/Tests/Build.Tests.ps1
           shell: pwsh
  
