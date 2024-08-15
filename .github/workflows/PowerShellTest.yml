@@ -1,0 +1,12 @@
+name: PowerShellTest
+on: [push]
+jobs:
+    build:
+      name: Run Script
+      runs-on: selfhost 
+      steps: 
+        - uses: actions/checkout@v1
+        - name: Scirpt
+          run: ./script.ps1
+          shell: pwsh
+ 
