@@ -42,6 +42,7 @@ jobs:
       with: 
        name: Setup
        path: Build-BizTalkMsi -Application $Solution_Name -Project $Wap_Project_Path
+       
     
     
    # move the files to UAT
