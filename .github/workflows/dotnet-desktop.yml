@@ -19,7 +19,7 @@ jobs:
       Wap_Project_Directory: DemoProjectForGitHubCICDPipeline.Package.                              # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
       Wap_Project_Path: DemoProjectForGitHubCICDPipeline/DemoProjectForGitHubCICDPipeline.btproj                      # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
       application: DemoProjectForGitHubCICDPipeline.btproj
-      projectName: DemoProjectForGitHubCICDPipeline.btproj
+      MSI_Path: C:\ShashankWork\CICDDemo\BTDF\MSI
       
     steps:
     - name: Checkout
@@ -33,9 +33,16 @@ jobs:
 
     # Create the app package by building and packaging the Windows Application Packaging project
     - name: Create the app package
-      run: Build-BizTalkMsi -Application $application -Project $projectName
+      #run: Build-BizTalkMsi -Application $application -Project $projectName
        #run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle 
-      #run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=C:\ShashankWork\CICDDemo\Pakage /p:OutDir=C:\ShashankWork\CICDDemo
+      run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=C:\ShashankWork\CICDDemo\Pakage /p:OutDir=C:\ShashankWork\CICDDemo
+
+    - name: publish MSI
+      uses: actions/upload-artifact@v2
+      with: 
+       name: Setup
+       path: Build-BizTalkMsi -Application $Solution_Name -Project $Wap_Project_Path
+    
     
    # move the files to UAT
    # - name: move files
