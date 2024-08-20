@@ -37,25 +37,10 @@ jobs:
        #run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle 
       run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=C:\ShashankWork\CICDDemo\Pakage /p:OutDir=C:\ShashankWork\CICDDemo
 
-
-  
+ 
     - name: Create the app MSI     
-      
       run: $build = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe " + "`"C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\Deployment.btdfproj`"" + " /nologo /t:Installer /p:Configuration=" + "Debug"
-  
-    #- name: publish MSI
-     # uses: actions/upload-artifact@v2
-     # with: 
-     # name: Setup
-     #  path: Build-BizTalkMsi -Application $Solution_Name -Project $Wap_Project_Path
-       
     
-    
-   # move the files to UAT
-   # - name: move files
-   #   uses: actions/checkout@v3
-
-   #- name: Move file
-   #   run: |
-   #       move C:\ShashankWork\CICDDemo\* \\c1ubt02-USEA1A\BIZ_BACKUP\CITestPakage
+    - name: Copy MSI to Remote Location     
+      run:  Copy-Item ("C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\Deployment.btdfproj" + "*.msi") "C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoDICDPipleineForVS\MSI1" -Force
     
