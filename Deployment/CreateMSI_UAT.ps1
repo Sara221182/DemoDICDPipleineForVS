@@ -16,7 +16,7 @@ $build = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe" + " `"C:\ac
 
 # Copy the installer to the directory containing all installation files
 
-#Copy-Item ("C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\bin\Debug\DemoProjectForGitHubCICDPipeline-1.0.0.msi") "C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoDICDPipleineForVS\MSI1" -Force
+Copy-Item ("C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\bin\Debug\DemoProjectForGitHubCICDPipeline-1.0.0.msi") "C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoDICDPipleineForVS\MSI1" -Force
 
  
 # Build the installer
