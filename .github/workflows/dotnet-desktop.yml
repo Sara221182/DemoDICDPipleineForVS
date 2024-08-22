@@ -39,6 +39,7 @@ jobs:
 
     - name: Build Powershell   
       run: ./Deployment/CreateMSI_UAT.ps1
+      
 
       
     #- name: Create the app MSI     
