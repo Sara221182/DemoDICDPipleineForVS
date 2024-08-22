@@ -40,6 +40,7 @@ jobs:
  
     - name: Create the app MSI     
       run: $build = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe " + "C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\Deployment.btdfproj" + " /nologo /t:Installer /p:Configuration=" + "Debug"
+      
     
     #- name: Copy MSI   
     #  run:  Copy-Item ("C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\DemoProjectForGitHubCICDPipeline-1.0.0.msi") "C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoDICDPipleineForVS\MSI1" -Force
