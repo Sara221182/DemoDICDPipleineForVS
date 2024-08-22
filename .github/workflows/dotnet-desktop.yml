@@ -37,9 +37,13 @@ jobs:
        #run: msbuild $env:Wap_Project_Path /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:Appx_Package_Build_Mode /p:AppxBundle=$env:Appx_Bundle 
       run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=C:\ShashankWork\CICDDemo\Pakage /p:OutDir=C:\ShashankWork\CICDDemo
 
+    - name: Build
+      shell: pwsh
+      run: |
+        .\CreateMSI_UAT.ps1
  
-    - name: Create the app MSI     
-      run: $build = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe " + "C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\Deployment.btdfproj" + " /nologo /t:Installer /p:Configuration=" + "Debug" --shouldBuildMsi=true     
+    #- name: Create the app MSI     
+    #  run: $build = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe " + "C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\Deployment.btdfproj" + " /nologo /t:Installer /p:Configuration=" + "Debug"     
       
     
     #- name: Copy MSI   
