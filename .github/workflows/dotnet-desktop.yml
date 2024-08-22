@@ -43,4 +43,5 @@ jobs:
     
     - name: Copy MSI to Remote Location     
       run:  Copy-Item ("C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\Deployment.btdfproj" + "*.msi") "C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoDICDPipleineForVS\MSI1" -Force
+      
     
