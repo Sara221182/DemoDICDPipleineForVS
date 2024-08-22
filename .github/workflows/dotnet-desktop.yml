@@ -38,7 +38,6 @@ jobs:
       run: msbuild $env:Wap_Project_Path /p:Configuration=Release /p:UapAppxPackageBuildMode=C:\ShashankWork\CICDDemo\Pakage /p:OutDir=C:\ShashankWork\CICDDemo
 
     - name: Build    
-      shell: pwsh
       run: |
         ./Deployment/CreateMSI_UAT.ps1
  
