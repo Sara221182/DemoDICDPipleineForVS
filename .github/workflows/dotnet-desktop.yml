@@ -20,12 +20,23 @@ jobs:
       Wap_Project_Path: DemoProjectForGitHubCICDPipeline/DemoProjectForGitHubCICDPipeline.btproj                      # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
       application: DemoProjectForGitHubCICDPipeline.btproj
       MSI_Path: C:\ShashankWork\CICDDemo\BTDF\MSI
-      
+ 
+
     steps:
+    - uses: actions/checkout@master
+
+    - name: Setup VSWhere.exe
+      uses: warrenbuckley/Setup-VSWhere@v1
+
+    - name: VSWhere MSBuild
+      run: vswhere -latest -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe
+      
     - name: Checkout
       uses: actions/checkout@v4
       with:
         fetch-depth: 0
+
+        
 
     # Add  MSBuild to the PATH: https://github.com/microsoft/setup-msbuild
     - name: Setup MSBuild.exe
