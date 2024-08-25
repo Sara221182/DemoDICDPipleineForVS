@@ -20,7 +20,7 @@ jobs:
       Wap_Project_Path: DemoProjectForGitHubCICDPipeline/DemoProjectForGitHubCICDPipeline.btproj                      # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.
       application: DemoProjectForGitHubCICDPipeline.btproj
       MSI_Path: C:\ShashankWork\CICDDemo\BTDF\MSI
- 
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     steps:
     - uses: actions/checkout@master
