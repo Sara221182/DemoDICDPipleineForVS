@@ -51,8 +51,7 @@ jobs:
     - name: Build Powershell   
       run: ./Deployment/CreateMSI_UAT.ps1
 
-
-           
+         
     #- name: Create the app MSI     
     #  run: $build = "C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe " + "C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\Deployment.btdfproj" + " /nologo /t:Installer /p:Configuration=" + "Debug"     
       
