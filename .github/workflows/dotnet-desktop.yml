@@ -37,7 +37,8 @@ jobs:
         fetch-depth: 0
 
     - name: Build Powershell   
-      run: ./Deployment/CreateMSI_UAT.ps1 -RunAsAdmin
+      run: bash<./Deployment/CreateMSI_UAT>.sh 
+     
          
       
       
