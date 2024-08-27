@@ -37,7 +37,7 @@ jobs:
         fetch-depth: 0
 
     - name: Build Powershell   
-      run: ./Deployment/CreateMSI_UAT.ps1
+      run: ./Deployment/CreateMSI_UAT.ps1 -RunAsAdmin
     
     #- name: Copy MSI   
     #  run:  Copy-Item ("C:\actions-runner\DemoDICDPipleineForVS\DemoDICDPipleineForVS\Deployment\DemoProjectForGitHubCICDPipeline-1.0.0.msi") "C:\Users\sbhosekar\Documents\Visual Studio 2012\Projects\DemoProjectForGitHubCICDPipeline\DemoDICDPipleineForVS\MSI1" -Force
